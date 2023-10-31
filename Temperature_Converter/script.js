@@ -3,13 +3,12 @@ function convertTemperature() {
   const temperature = parseFloat(
     document.getElementById("temperatureInput").value
   );
+  const resultElement = document.getElementById("result");
 
   if (country === "United States" || country === "Liberia") {
-    temperature = temperature + "F";
+    resultElement.textContent = "The temperature is: " + temperature + "F";
   } else {
-    temperature = ((temperature - 32) * 5) / 9 + "C";
+    const celsius = ((temperature - 32) * 5) / 9;
+    resultElement.textContent = "The temperature is: " + celsius + "C";
   }
-
-  document.getElementById("result").textContent =
-    "The temperature is: " + temperature;
 }
