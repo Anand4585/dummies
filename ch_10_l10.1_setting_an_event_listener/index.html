@@ -12,6 +12,7 @@
         trackingArea.addEventListener("mousemove", onMouseMove);
         function onMouseMove(e) {
           setPosition({ x: e.offsetX, y: e.offsetY });
+          console.log("event:", e);
         }
       }
       function setPosition(position) {
